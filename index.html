@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio of Ritu Sharma">
+<meta name="keywords" content="HTML, CSS, JavaScript, Portfolio">
+<title>Ritu Sharma Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color:#f4f4f4;
+    line-height:1.6;
+}
+
+header{
+    background-color:#4a6cf7;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+nav{
+    background:white;
+    text-align:center;
+    padding:15px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a{
+    text-decoration:none;
+    color:black;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+section{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2{
+    margin-bottom:10px;
+    color:#4a6cf7;
+}
+
+ul{
+    margin-left:20px;
+}
+
+.project{
+    border:1px solid #ddd;
+    padding:10px;
+    margin-top:10px;
+    border-radius:5px;
+}
+
+form input,
+form textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+}
+
+button{
+    background:#4a6cf7;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#3554d1;
+}
+
+footer{
+    text-align:center;
+    background:#222;
+    color:white;
+    padding:15px;
+    margin-top:20px;
+}
+
+@media(max-width:768px){
+    nav a{
+        display:block;
+        margin:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ritu Sharma</h1>
+    <p>Student at Sanskriti University</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Hello! My name is Ritu Sharma. I am a student at Sanskriti University.
+        I am learning web development and improving my skills in HTML, CSS and JavaScript.
+        I enjoy creating simple and responsive websites.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Responsive Web Design</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <article class="project">
+        <h3>Portfolio Website</h3>
+        <p>A simple personal portfolio website made using HTML and CSS.</p>
+    </article>
+
+    <article class="project">
+        <h3>Student Registration Form</h3>
+        <p>A basic registration form using HTML and JavaScript validation.</p>
+    </article>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" aria-label="Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" aria-label="Email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" aria-label="Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p id="result"></p>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2025 Ritu Sharma | Sanskriti University</p>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event){
+    event.preventDefault();
+
+    document.getElementById("result").innerHTML =
+    "Thank you Your message has been submitted.";
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>
